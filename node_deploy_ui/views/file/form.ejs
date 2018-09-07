@@ -1,0 +1,79 @@
+<h1 class="page-header">Deploy-Config</h1>
+<h2>Setting All Config</h2>
+<form class="form-signin" role="form" action="/formadd" method="post">
+    <!--<form name="addform" action="formadd" method="post" accept-charset="utf-8" onSubmit="return Check();">-->
+    <table class="table">
+        <div class="row">
+            <tr>
+                <td><span style="font-size:x-large;">Hostname</span></td>
+                <td>
+                    <input type="text" name="hostname" class="form-control" value='<%= data.hostname %>' style=width:150px>
+                </td>
+                <!-- <td></td>
+                <td></td> -->
+                <!-- <td></td> -->
+            </tr>
+            <tr>
+                <th></th>
+                <th>Address</th>
+                <th>Gateway</th>
+                <th>DNS</th>
+            </tr>
+            <tr>
+                <td>Manage Network:</td>
+                <td>
+                    <input type="text" name="address1" value="<%= data.address1 %>" />
+                </td>
+                <td>
+                    <input type="text" name="gateway" value="<%= data.gateway %>" />
+                </td>
+                <td>
+                    <input type="text" name="dnsname" value="<%= data.dnsname %>" />
+                </td>
+            </tr>
+            <tr>
+                <td>VM Network:</td>
+                <td>
+                    <input type="text" name="address2" value="<%= data.address2 %>" />
+                </td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Public Network:</td>
+                <td>
+                    <input type="text" name="address3" value="<%= data.address3 %>" />
+                </td>
+                <td>
+                    <input type="text" name="gateway3" value="<%= data.gateway3 %>" />
+                </td>
+                <td>
+                    <input type="text" name="dnsname3" value="<%= data.dnsname3 %>" />
+                </td>
+            </tr>
+                <td>Public Start:</td>
+
+                <td>
+                    <input type="text" name="public_start" value='<%= data.public_start %>'/>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            </tr>
+                <td>Public Start:</td>
+                <td>
+                    <input type="text" name="public_end" value='<%= data.public_end %>'/>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </div>
+        <table class="table">
+                <input class="btn btn-primary btn-lg" type='button' value='Back' onclick="javascript: location.href='/port'">
+                <input class="btn btn-primary btn-lg" type='submit' value='Next'>
+            </label>
+        </table>
+    </table>
+</form>               

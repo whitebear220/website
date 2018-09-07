@@ -1,0 +1,96 @@
+<h1 class="page-header">Dashboard</h1>
+<h1>Openstack Config - List</h1>
+   <form class="form-signin" role="form" action="/formadd" method="post">
+   <!--<form name="addform" action="formadd" method="post" accept-charset="utf-8" onSubmit="return Check();">-->
+       <table class="table">
+           <div class="row">
+           <tr>
+               <td>Date</td>
+               <td>
+                   <input type="text" name="date" value='2017-11-11'/>
+               </td>
+               <td></td>
+               <td></td>
+               <!-- <td></td> -->
+           </tr>
+           <tr>
+               <td>Time</td>
+               <td>
+                   <input type="text" name="time" value='18:00'/>
+               </td>
+               <td></td>
+               <td></td>
+               <!-- <td></td> -->
+           </tr>
+           <tr>
+               <td>Hostname</td>
+               <td>
+                   <input type="text" name="hostname" value='Controller'/>
+               </td>
+               <td></td>
+               <td></td>
+               <!-- <td></td> -->
+           </tr>
+           <tr>
+               <th></th>
+               <th>ManageNework</th>
+               <th>VlanNetwork</th>
+               <th>PublicNetwork</th>
+               <!-- <th>StorageNetwork</th> -->
+           </tr>
+           <tr>
+               <td>Ethernet:</td>  
+               <td>
+                   <input type="text" name="manage" value='eth0'/>
+               </td>
+               <td>
+                   <input type="text" name="vmlan" value="eth1">        
+               </td>
+               <td>
+                   <input type="text" name="public" value="eth2">        
+               </td>
+               <!-- <td>
+                   <input type="text" name="storage" placeholder="eth3">        
+               </td> -->
+           </tr>   
+   
+           <tr>
+               <td>Address:</td>  
+               <td>
+                   <input type="text" name="address1" value="10.0.0.1/24" />
+               </td>
+               <td>
+                   <input type="text" name="address2" value="10.0.1.1/24">        
+               </td>
+               <td>
+                   <!-- <input type="text" name="address3" placeholder="10.0.2.1/24">         -->
+               </td>
+               <!-- <td>
+                   <input type="text" name="address4" placeholder="10.0.3.1/24">        
+               </td> -->
+           </tr>
+           <tr>
+               <td>Gateway:</td>  
+               <td>
+                   <input type="text" name="gateway" id="gateway" value="10.0.0.254" />
+               </td>
+               <td></td>
+               <td></td>
+               <!-- <td></td> -->
+           </tr>
+           <tr>
+               <td>Dnsname:</td>  
+               <td>
+                   <input type="text" name="dnsname" value="8.8.8.8" />
+               </td>
+               <td></td>
+               <td></td>
+               <!-- <td></td> -->
+           </tr>
+            </div>
+           <table class="table">
+               <input class="btn" type='submit' value='Submit'>
+               </label>
+           </table>
+   </table>
+</form>

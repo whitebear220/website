@@ -1,0 +1,99 @@
+<h1 class="page-header">Dashboard</h1>
+<h1>Config - List</h1>
+   <!--<form name="addform" action="formadd" method="post" accept-charset="utf-8" onSubmit="return Check();">-->
+       <table class="table">
+           <div class="row">
+           <tr>
+               <td>Date</td>
+               <td>
+                   <%= data.date  %>
+               </td>
+               <td></td>
+               <td></td>
+               <!-- <td></td> -->
+           </tr>
+           <tr>
+               <td>Time</td>
+               <td>
+                    <%= data.time %>
+               </td>
+               <td></td>
+               <td></td>
+               <!-- <td></td> -->
+           </tr>
+           <tr>
+               <td>Hostname</td>
+               <td>
+                    <%= data.hostname %>
+               </td>
+               <td></td>
+               <td></td>
+               <!-- <td></td> -->
+           </tr>
+           <tr>
+               <th></th>
+               <th>ManageNework</th>
+               <th>VlanNetwork</th>
+               <th>Public(Neutron)</th>
+               <!-- <th>StorageNetwork</th> -->
+           </tr>
+           <tr>
+               <td>Ethernet:</td>  
+               <td>
+                    <%= data.manage %>
+               </td>
+               <td>
+                    <%= data.vmlan %> 
+               </td>
+               <td>
+                    <%= data.public %>
+               </td>
+               <!-- <td>
+                   <input type="text" name="storage" placeholder="eth3">        
+               </td> -->
+           </tr>   
+   
+           <tr>
+               <td>Address:</td>  
+               <td>
+                    <%= data.address1 %>
+               </td>
+               <td>
+                    <%= data.address2 %>
+               </td>
+               <td>
+                    <%= data.address3 %>
+               </td>
+               <!-- <td>
+                   <input type="text" name="address4" placeholder="10.0.3.1/24">        
+               </td> -->
+           </tr>
+           <tr>
+               <td>Gateway:</td>  
+               <td>
+                    <%= data.gateway %>
+               </td>
+               <td></td>
+               <td>
+                    <%= data.gateway3 %>
+               </td>
+               <!-- <td></td> -->
+           </tr>
+           <tr>
+               <td>Dnsname:</td>  
+               <td>
+                    <%= data.dnsname %>
+               </td>
+               <td></td>
+               <td>
+                    <%= data.dnsname3 %>
+               </td>
+               <!-- <td></td> -->
+           </tr>
+            </div>
+           <table class="table">
+               <input class="btn" type='button' value='Back' onclick="javascript: location.href='/form'">
+               <input class="btn" type='submit' value='Next' onclick="javascript: location.href='/do'">
+               </label>
+           </table>
+   </table>

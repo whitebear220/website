@@ -1,0 +1,41 @@
+<h1 class="page-header">Deploy-Config</h1>
+<h2>Setting date</h2>
+
+<form class="form-signin" role="form" action="/dateadd" method="post">
+<!--<form name="addform" action="formadd" method="post" accept-charset="utf-8" onSubmit="return Check();">-->
+    <table class="table" style=width:350px>
+        <div class="row">
+        <tr>
+            <td><span style="font-size:x-large;">County</span></td>
+            <td><input type="text" name="county" id="county" class="form-control" value="Aisa/Taipei" ></td>
+ 
+        </tr>
+        <tr>
+            <td>
+                <span style="font-size:x-large;">Date:</span>
+            </td>
+            <td>
+                <input type="text" name="date" id="date" class="form-control" value='<%= data.date %>' >
+            </td>
+
+
+            <!-- <td></td> -->
+        </tr>
+        <tr>
+            <td>
+                <span style="font-size:x-large;">Time:</span>
+            <td>
+                <input type="text" name="time" id="time" class="form-control" value='<%= data.time %>' >
+            </td>
+
+
+            <!-- <td></td> -->
+        </tr>
+    </div>
+    <table class="table">
+        <input class="btn btn-primary btn-lg" type='button' value='Back' onclick="javascript: location.href='/start'">
+        <input class="btn btn-primary btn-lg" type='submit' value='Next'>
+        </label>
+    </table>
+</table>
+</form>

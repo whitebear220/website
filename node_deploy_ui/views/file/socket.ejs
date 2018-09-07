@@ -1,0 +1,51 @@
+<div class="row">
+    <div class="col-md-10 col-md-offset-1">
+        <div class="row">
+            <h4 class="col-md-4">Deploy Log</h4>
+            <div class="col-md-2 col-md-offset-3" style="float:right;">
+                <button type="button" class="btn btn-primary" id="pause" onclick="$(this).hide();$('#play').show();$('#status').val('pause'); return;"><i class="fa fa-pause"> 暫停 </i></button>
+                <button type="button" class="btn btn-primary" id="play" style="display:none" onclick="$(this).hide();$('#pause').show();$('#status').val('play'); return;"><i class="fa fa-play"> 繼續</i></button>
+                <button type="button" class="btn btn-primary" onclick="$('#log').html('')"><i class="fa fa-eraser"> 清除</i></button>
+                <input type="hidden" id="status" value="play" />
+            </div>
+        </div>
+        <hr class="no-top-margin">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <pre id="log" style="background-color:#000; color:#fff; height:550px;overflow-x:hidden;overflow-y:auto; ">
+                </pre>
+            </div>
+        </div>
+       </div>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/jquery.1.11.min.js"></script>
+<script type="text/javascript">
+$(function(){
+var socket = io('/taillog');
+socket.on('connect', function () {
+    console.log('Connection Success');
+});
+
+//接收資料處理
+socket.on('data', function(data){
+    //狀態判斷，處理監聽狀態時的輸出資料到網頁上
+    if(document.getElementById('status').value==='play'){
+        var log = document.getElementById('log');
+        log.innerHTML = log.innerHTML +data;
+        log.scrollTop=Math.max(0,log.scrollHeight-log.offsetHeight);
+    }
+});
+
+//log監控程序退出處理
+socket.on('close', function(msg){
+    console.log(msg)
+});
+
+//錯誤處理
+socket.on('err', function(msg){
+    console.log(msg)
+});
+});
+</script>

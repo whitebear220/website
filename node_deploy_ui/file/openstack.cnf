@@ -1,0 +1,23 @@
+[mysqld]
+binlog_format=ROW
+default-storage-engine=innodb
+innodb_autoinc_lock_mode=2
+innodb_doublewrite=1
+query_cache_size = 0
+query_cache_type = 0
+max_connections = 10000
+bind-address=%HOST_IP%
+
+[galera]
+binlog_format=row
+default-storage-engine=innodb
+innodb_autoinc_lock_mode=2
+innodb_doublewrite=1
+wsrep_on=ON
+wsrep_node_address = "%HOST_IP%"
+wsrep_provider = /usr/lib/galera/libgalera_smm.so
+wsrep_cluster_name = "openstack-cluster"
+wsrep_cluster_address = "gcomm://%HOST_IP_A%,%HOST_IP_B%"
+#wsrep_cluster_address="gcomm://"
+wsrep_sst_auth = localadmin:openstack
+wsrep_sst_method = rsync

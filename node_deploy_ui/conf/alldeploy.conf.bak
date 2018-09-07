@@ -1,0 +1,40 @@
+# Config Formate
+OPENSTACK_VER="pike"
+
+# Port
+MANAGE_PORT="ens3"
+VMLAN_PORT="ens9"
+PUBLIC_PORT="ens3"
+STORAGE_PORT=""
+
+# Hostname
+CT_HOST="Controller"
+DB_HOST="Controller"
+
+# IP address
+CT_IP="10.0.3.100"
+MANAGE_IP="10.0.3.100/22"
+MANAGE_GW="10.0.3.254"
+VMLAN_IP="10.10.11.102/24"
+STORAGE_IP="10.10.2.13/24"
+DNS="8.8.8.8"
+
+#PASSWORD
+MARIADB_PASSWORD="openstack"
+OPENSTACK_DBPASS="openstack"
+METADATA_SECRET="openstack"
+
+#Login user account&passwd
+ADMIN_USER="novaadmin"
+ADMIN_PASSWD="openstack"
+DEMO_USER="demo"
+DEMO_PASSWD="openstack"
+#neutron outside network
+EXT_NET="10.0.0.0/22"
+EXT_START="10.0.3.110"
+EXT_STOP="10.0.3.120"
+EXT_GATEWAY="10.0.3.254"
+EXT_DNS="8.8.8.8"
+######## Neutron DEMO network ######
+CLIENT_NET="192.168.1.0/24"
+CLIENT_GATEWAY="192.168.1.1"

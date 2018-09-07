@@ -1,0 +1,39 @@
+<h1 class="page-header">Deploy-Config</h1>
+<h2>Setting Network Port</h2>
+
+   <form class="form-signin" role="form" action="/portadd" method="post">
+   <!--<form name="addform" action="formadd" method="post" accept-charset="utf-8" onSubmit="return Check();">-->
+       <table class="table" style=width:350px>
+           <div class="row">
+           <!-- <tr>
+               <td></td>
+               <td><span style="font-size:x-large;"></span>Ethernet</td>
+           </tr> -->
+           <tr>
+               <td><span style="font-size:x-large;">Manage:</span></td>
+               <td>
+                   <input type="text" name="manage" id="manage" class="form-control" value='<%= data.manage %>'>
+               </td>
+           </tr>
+           <tr>
+               <td><span style="font-size:x-large;">VM:</span></td>
+               <td>
+                   <input type="text" name="vmlan" id="vmlan"class="form-control" value='<%= data.vmlan %>'>
+               </td>
+
+           </tr>
+           <tr>
+               <td>
+                   <span style="font-size:x-large;">Public:</span></td>
+               <td>
+                   <input type="text" name="public" id="public" class="form-control" value='<%= data.public %>'>
+               </td>
+           </tr>
+           </div>
+           <table class="table">
+                <input class="btn btn-primary btn-lg" type='button' value='Back' onclick="javascript: location.href='/date'">
+                <input class="btn btn-primary btn-lg" type='submit' value='Next'>
+                </label>
+           </table>
+   </table>
+</form>

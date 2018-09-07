@@ -1,0 +1,93 @@
+<h1 class="page-header">Deploy-Check</h1>
+<!-- <form class="form-signin" role="form" action="/formadd" method="post"> -->
+    <!--<form name="addform" action="formadd" method="post" accept-charset="utf-8" onSubmit="return Check();">-->
+    <table class="table" style=width:700px>
+        <div class="row">
+            <tr>
+                <td>Openstack Version</td>
+                <td><%= data.openstack_ver %></td>
+                
+            </tr>
+            <tr><td><h3>System</h3></td><td></td></tr>
+            <tr>
+                <td>County:</td>
+                <td><%= data.county %></td>
+            </tr>
+            <tr>
+                <td>Date:</td>
+                <td><%= data.date %></td>
+            </tr>
+            <tr>
+                <td>Time:</td>
+                <td><%= data.time %></td>
+            </tr>
+            <tr>
+                <td>Hostname:</td>
+                <td><%= data.hostname %></td>
+            </tr>
+            <tr>
+                <td>IP address:</td>
+                <td><%= data.hostip %></td>
+            </tr>
+            <tr><td><h3>Network Port</h3></td><td></td></tr>
+            <tr>
+               <td>Manage:</td>
+               <td><%= data.manage_port %></td>
+            </tr>
+            <tr>
+               <td>VM:</td>
+               <td><%= data.vmlan_port %></td>
+            </tr>
+            <tr>
+               <td>Public:</td>
+               <td><%= data.public_port %></td>
+            </tr>
+            <tr><td><h3>Network Config</h3></td><td></td></tr>
+            <tr>
+                <th></th>
+                <th>Address</th>
+                <th>Gateway</th>
+                <th>DNS</th>
+            </tr>
+            <tr>
+                <td>Manage Network:</td>
+                <td><%= data.manage_ip %></td>
+                <td><%= data.manage_gw %></td>
+                <td><%= data.dns %></td>
+            </tr>
+            <tr>
+                <td>VM Network:</td>
+                <td><%= data.vmlan_ip %></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Public Network:</td>
+                <td><%= data.public_net %></td>
+                <td><%= data.public_gateway %></td>
+                <td><%= data.public_dns %></td>
+            </tr>
+                <td>Public Start:</td>
+
+                <td><%= data.public_start %></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            </tr>
+                <td>Public Start:</td>
+                <td><%= data.public_end %></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </div>
+        <table class="table">
+                <input class="btn btn-primary btn-lg" type='button' value='Back' onclick="javascript: location.href='/alldeployconfig'">
+                <form method="post" action="/todo"> 
+                    <input class="btn btn-primary btn-lg" type='submit' value='Next' onclick="this.form.action='todo';this.form.submit();">
+                </form>
+            </label>
+        </table>
+    </table>
+<!-- </form>                -->
